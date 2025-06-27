@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -27,7 +26,6 @@ const Auth = () => {
           email: formData.email,
           password: formData.password,
         });
-
         if (error) throw error;
 
         toast({
@@ -44,7 +42,6 @@ const Auth = () => {
             }
           }
         });
-
         if (error) throw error;
 
         toast({
@@ -64,13 +61,13 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+      <Card className="w-full max-w-md bg-gray-100 shadow-2xl rounded-2xl">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl">
+          <CardTitle className="text-2xl text-gray-900">
             {isLogin ? 'Welcome Back' : 'Create Account'}
           </CardTitle>
-          <p className="text-muted-foreground">
+          <p className="text-sm text-gray-600">
             {isLogin ? 'Sign in to your CoupleFinance account' : 'Join CoupleFinance today'}
           </p>
         </CardHeader>
@@ -78,7 +75,7 @@ const Auth = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {!isLogin && (
               <div>
-                <Label htmlFor="username">Username</Label>
+                <Label htmlFor="username" className="text-gray-800">Username</Label>
                 <Input
                   id="username"
                   placeholder="Your username"
@@ -88,10 +85,10 @@ const Auth = () => {
                 />
               </div>
             )}
-            
             <div>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className="text-gray-800">Email</Label>
               <Input
+                className='bg-gray-100 text-gray-900'
                 id="email"
                 type="email"
                 placeholder="your@email.com"
@@ -100,10 +97,10 @@ const Auth = () => {
                 required
               />
             </div>
-            
             <div>
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password" className="text-gray-800">Password</Label>
               <Input
+                className='bg-gray-100 text-gray-900'
                 id="password"
                 type="password"
                 placeholder="Your password"
@@ -112,8 +109,7 @@ const Auth = () => {
                 required
               />
             </div>
-
-            <Button type="submit" className="w-full" disabled={loading}>
+            <Button type="submit" className="w-full bg-gray-800 text-gray-50 hover:bg-gray-900" disabled={loading}>
               {loading ? 'Loading...' : (isLogin ? 'Sign In' : 'Sign Up')}
             </Button>
           </form>
@@ -122,7 +118,7 @@ const Auth = () => {
             <Button
               variant="link"
               onClick={() => setIsLogin(!isLogin)}
-              className="text-sm"
+              className="text-sm text-blue-600"
             >
               {isLogin ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
             </Button>
