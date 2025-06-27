@@ -37,20 +37,21 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* New: Success colors for light theme */
+    --success: 142.1 76.2% 36.3%; /* A vibrant green (e.g., Emerald 600) */
+    --success-foreground: 0 0% 100%; /* White text on success background */
+
+    /* New: Info colors for light theme (for blue accents) */
+    --info: 217.2 91.2% 59.8%; /* A vibrant blue (e.g., Blue 500) */
+    --info-foreground: 0 0% 100%; /* White text on info background */
   }
 
   .dark {
@@ -89,6 +90,14 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* New: Success colors for dark theme (keeping similar to existing greens) */
+    --success: 142.1 76.2% 36.3%; /* Similar to Emerald 600/700 */
+    --success-foreground: 142.1 76.2% 80%; /* Lighter green for text (e.g., Emerald 300) */
+
+    /* New: Info colors for dark theme (keeping similar to existing blues) */
+    --info: 217.2 91.2% 59.8%; /* Similar to Blue 500/600 */
+    --info-foreground: 217.2 91.2% 80%; /* Lighter blue for text (e.g., Blue 300) */
   }
 }
 
